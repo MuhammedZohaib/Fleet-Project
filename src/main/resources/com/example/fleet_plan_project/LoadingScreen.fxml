@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="loadingStage" prefHeight="350.0" prefWidth="275.0" style="-fx-background-color: #0f4c81;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fleet_plan_project.LoadingScreen_Controller">
+   <children>
+      <Text fill="WHITE" layoutX="32.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FLEET MANAGER">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="60.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Your One Stop Flight Solution&quot;">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="117.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/giphy.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
