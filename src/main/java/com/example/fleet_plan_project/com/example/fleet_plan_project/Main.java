@@ -12,7 +12,7 @@ public class Main extends Application { //Execution Point of JavaFX Application
     @Override
     public void start(Stage stage) throws IOException {
         //Loading FXML File
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("B737.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("LoadingScreen.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene); //Setting Scene
         stage.initStyle(StageStyle.UNDECORATED); //Resetting Default Styling of Stage

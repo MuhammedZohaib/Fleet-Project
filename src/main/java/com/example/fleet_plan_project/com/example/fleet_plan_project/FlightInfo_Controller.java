@@ -88,7 +88,7 @@ public class FlightInfo_Controller implements Initializable {
                 welcomeText.setText("Welcome to Boeing B737");
         }
         catch (NullPointerException e){
-            System.out.println();
+            System.out.println(e);
         }
     }
     public void next(ActionEvent e) throws IOException {
