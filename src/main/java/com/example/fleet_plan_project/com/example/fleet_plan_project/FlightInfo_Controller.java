@@ -12,7 +12,6 @@ import javafx.scene.text.Text;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.ResourceBundle;
 
 
@@ -34,8 +33,6 @@ public class FlightInfo_Controller implements Initializable {
     private Button exit;
     @FXML
     private RadioButton manualRButton;
-    @FXML
-    private Button nextButton;
     @FXML
     private TextField originField;
     @FXML
@@ -59,7 +56,13 @@ public class FlightInfo_Controller implements Initializable {
     @FXML
     private TextField returnOriginField;
     @FXML
-    private Button returnSaveButton;
+    private Text retDateValidation;
+    @FXML
+    private Text retDestinationValidation;
+    @FXML
+    private Text retOriginValidation;
+    @FXML
+    private Text returnTicketsValidation;
 
     String alphabetRegex = "^[a-zA-Z ]*$";
 
@@ -69,19 +72,24 @@ public class FlightInfo_Controller implements Initializable {
     public static Boolean randomSeats;
     public static Boolean disabled;
     public static Boolean returnReservation;
-
+    public static String retOriginAirport;
+    public static String retDestinationAirport;
+    public static LocalDate retDate;
+    public static String noOfRetTickets;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        if(Integer.parseInt(MainScreen_Controller.getHours()) <= 2){
-            welcomeText.setText("Welcome to Airbus A318");
+        try{
+            if(Integer.parseInt(MainScreen_Controller.getHours()) <= 2){
+                welcomeText.setText("Welcome to Airbus A318");
+            }
+            else
+                welcomeText.setText("Welcome to Boeing B737");
         }
-        else
-            welcomeText.setText("Welcome to Boeing B737");
-    }
-    public void exit(){
-        new GeneralFunctions().close(exit);
+        catch (NullPointerException e){
+            System.out.println();
+        }
     }
     public void next(ActionEvent e) throws IOException {
         depOriginAirport = originField.getText();
@@ -133,13 +141,70 @@ public class FlightInfo_Controller implements Initializable {
         catch (NullPointerException exception){
             departureDateValidation.setText("! Invalid Date");
         }
-        if(returnYes.isSelected() && returnReservation == true && originValidation.getText().equals("") && destinationValidation.getText().equals("") && departureDateValidation.getText().equals("")){
-            new GeneralFunctions().switchSceneModality("ReturnReservationForm.fxml");
+        if(returnYes.isSelected() && returnReservation && originValidation.getText().equals("") && destinationValidation.getText().equals("") && departureDateValidation.getText().equals("")){
+            new GeneralFunctions().switchScene(e,"ReturnReservationForm.fxml");
         }
-        else if(returnNo.isSelected() && Integer.parseInt(MainScreen_Controller.getHours()) <= 2 && returnReservation == false && originValidation.getText().equals("") && destinationValidation.getText().equals("") && departureDateValidation.getText().equals("")){
+        else if(returnNo.isSelected() && Integer.parseInt(MainScreen_Controller.getHours()) <= 2 && !returnReservation && originValidation.getText().equals("") && destinationValidation.getText().equals("") && departureDateValidation.getText().equals("")){
             new GeneralFunctions().switchScene(e, "A318.fxml");
         }
-        else if(returnNo.isSelected() && Integer.parseInt(MainScreen_Controller.getHours()) >2 && returnReservation == false && originValidation.getText().equals("") && destinationValidation.getText().equals("") && departureDateValidation.getText().equals("")){
+        else if(returnNo.isSelected() && Integer.parseInt(MainScreen_Controller.getHours()) >2 && !returnReservation && originValidation.getText().equals("") && destinationValidation.getText().equals("") && departureDateValidation.getText().equals("")){
+            new GeneralFunctions().switchScene(e,"B737.fxml");
+        }
+    }
+    public void saveReturnReservation(ActionEvent e) throws IOException {
+        retOriginAirport = returnOriginField.getText();
+        retDestinationAirport = returnDestinationField.getText();
+        noOfRetTickets = returnNoOfTickets.getText();
+        try {
+            retDate = returnDateField.getValue();
+        }
+        catch (NullPointerException exception){
+            retDateValidation.setText("! Date cannot Be empty");
+        }
+
+        if(!retOriginAirport.matches(alphabetRegex)){
+            returnOriginField.setText("");
+            retOriginValidation.setText("! Origin Airport field cannot contain Numbers");
+        }
+        else if(retOriginAirport.isBlank() || retOriginAirport.isEmpty()){
+            returnOriginField.setText("");
+            retOriginValidation.setText("! Origin Airport cannot be empty");
+        }
+        if(!retDestinationAirport.matches(alphabetRegex)){
+            returnDestinationField.setText("");
+            retDestinationValidation.setText("! Destination Airport Field cannot contain Numbers");
+        }
+        else if(retDestinationAirport.isEmpty() || retDestinationAirport.isBlank())
+        {
+            returnDestinationField.setText("");
+            retDestinationValidation.setText("! Destination Airport cannot be empty");
+        }
+        try {
+            if(retDate.getYear() > 2023){
+                returnDateField.setValue(null);
+                retDateValidation.setText("! Invalid Date");
+            }
+        }
+        catch (NullPointerException exception){
+            returnDateField.setValue(null);
+            retDateValidation.setText("! Invalid Date");
+        }
+        if(!noOfRetTickets.matches(new MainScreen_Controller().numericRegex)){
+            returnTicketsValidation.setText("! No. of Tickets field cannot contain Alphabets");
+        }
+        else if(noOfRetTickets.isBlank() || noOfRetTickets.isEmpty()){
+            returnNoOfTickets.setText("");
+            returnTicketsValidation.setText("! No. of Tickets Field cannot be empty");
+        }
+        else if(Integer.parseInt(noOfRetTickets) == 0){
+            returnNoOfTickets.setText("");
+            returnTicketsValidation.setText("! No. of Return Tickets cannot be zero");
+        }
+
+        else if( retOriginValidation.getText().equals("") &&  retDestinationValidation.getText().equals("") && retDateValidation.getText().equals("") && returnTicketsValidation.getText().equals("") && Integer.parseInt(MainScreen_Controller.getHours()) <=2 ){
+            new GeneralFunctions().switchScene(e,"A318.fxml");
+        }
+        else if( retOriginValidation.getText().equals("") &&  retDestinationValidation.getText().equals("") && retDateValidation.getText().equals("") && returnTicketsValidation.getText().equals("") && Integer.parseInt(MainScreen_Controller.getHours()) >2 ){
             new GeneralFunctions().switchScene(e,"B737.fxml");
         }
     }
@@ -147,6 +212,18 @@ public class FlightInfo_Controller implements Initializable {
         originValidation.setText("");
         destinationValidation.setText("");
         departureDateValidation.setText("");
+    }
+    public void resetReturnValidations(){
+        retOriginValidation.setText("");
+        retDestinationValidation.setText("");
+        retDateValidation.setText("");
+        returnTicketsValidation.setText("");
+    }
+    public void exit(){
+        new GeneralFunctions().close(exit);
+    }
+    public void reservationExit(){
+        new GeneralFunctions().close(reservationCloseButton);
     }
 
 

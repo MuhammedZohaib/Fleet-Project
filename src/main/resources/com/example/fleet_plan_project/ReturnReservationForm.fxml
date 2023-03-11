@@ -9,10 +9,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="470.0" prefWidth="380.0" style="-fx-background-color: #0f4c81;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fleet_plan_project.FlightInfo_Controller">
+<AnchorPane prefHeight="470.0" prefWidth="380.0" style="-fx-background-color: #1c2567;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fleet_plan_project.FlightInfo_Controller">
    <children>
-      <Button fx:id="reservationCloseButton" layoutX="328.0" layoutY="4.0" mnemonicParsing="false" onMouseClicked="#exit" style="-fx-background-color: transparent;">
+      <Button fx:id="reservationCloseButton" layoutX="328.0" layoutY="4.0" mnemonicParsing="false" onAction="#reservationExit" onMouseClicked="#exit" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView fitHeight="35.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -36,14 +35,14 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <TextField fx:id="returnDestinationField" layoutX="45.0" layoutY="195.0" prefWidth="250.0" />
-      <DatePicker fx:id="returnDateField" layoutX="45.0" layoutY="270.0" prefWidth="250.0" />
+      <TextField fx:id="returnDestinationField" layoutX="45.0" layoutY="195.0" onMouseClicked="#resetReturnValidations" prefWidth="250.0" />
+      <DatePicker fx:id="returnDateField" layoutX="45.0" layoutY="270.0" onMouseClicked="#resetReturnValidations" prefWidth="250.0" />
       <Text fill="WHITE" layoutX="45.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Enter the Origin Airport">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <TextField fx:id="returnOriginField" layoutX="45.0" layoutY="120.0" prefWidth="250.0" />
+      <TextField fx:id="returnOriginField" layoutX="45.0" layoutY="120.0" onMouseClicked="#resetReturnValidations" prefWidth="250.0" />
       <Text fill="WHITE" layoutX="45.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Reservation" underline="true">
          <font>
             <Font name="System Bold" size="24.0" />
@@ -54,7 +53,27 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <TextField fx:id="returnNoOfTickets" layoutX="45.0" layoutY="345.0" prefWidth="250.0" />
-      <Button fx:id="returnSaveButton" layoutX="257.0" layoutY="411.0" mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #1c2567;" text="Save" textFill="WHITE" />
+      <TextField fx:id="returnNoOfTickets" layoutX="45.0" layoutY="345.0" onMouseClicked="#resetReturnValidations" prefWidth="250.0" />
+      <Button fx:id="returnSaveButton" layoutX="257.0" layoutY="411.0" mnemonicParsing="false" onAction="#saveReturnReservation" prefWidth="100.0" style="-fx-background-color: #0f4c81;" text="Save" textFill="WHITE" />
+      <Text fx:id="retOriginValidation" layoutX="56.0" layoutY="137.0" onMouseClicked="#resetReturnValidations" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+      </Text>
+      <Text fx:id="retDestinationValidation" layoutX="56.0" layoutY="212.0" onMouseClicked="#resetReturnValidations" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+      </Text>
+      <Text fx:id="retDateValidation" layoutX="56.0" layoutY="287.0" onMouseClicked="#resetReturnValidations" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+      </Text>
+      <Text fx:id="returnTicketsValidation" layoutX="56.0" layoutY="362.0" onMouseClicked="#resetReturnValidations" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
