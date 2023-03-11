@@ -33,31 +33,31 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <TextField fx:id="age" layoutX="45.0" layoutY="195.0" prefWidth="250.0" />
+      <TextField fx:id="age" layoutX="45.0" layoutY="195.0" onAction="#resetValidations" prefWidth="250.0" />
       <Text fill="WHITE" layoutX="45.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Enter Your Name">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <TextField fx:id="name" layoutX="45.0" layoutY="120.0" prefWidth="250.0" />
+      <TextField fx:id="name" layoutX="45.0" layoutY="120.0" onAction="#resetValidations" prefWidth="250.0" />
       <Text fill="WHITE" layoutX="45.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USER INFORMATION" underline="true">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <TextField fx:id="phoneNumber" layoutX="45.0" layoutY="277.0" prefWidth="250.0" />
+      <TextField fx:id="phoneNumber" layoutX="45.0" layoutY="277.0" onAction="#resetValidations" prefWidth="250.0" />
       <Button fx:id="reserveSeat" layoutX="208.0" layoutY="330.0" mnemonicParsing="false" onAction="#reserve" prefWidth="100.0" style="-fx-background-color: #0f4c81;" text="Reserve" textFill="WHITE" />
-      <Text fx:id="nameValidation" layoutX="56.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+      <Text fx:id="nameValidation" layoutX="56.0" layoutY="137.0" onMouseClicked="#resetValidations" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
          <font>
             <Font name="System Bold Italic" size="10.0" />
          </font>
       </Text>
-      <Text fx:id="ageValidation" layoutX="56.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+      <Text fx:id="ageValidation" layoutX="56.0" layoutY="212.0" onMouseClicked="#resetValidations" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
          <font>
             <Font name="System Bold Italic" size="10.0" />
          </font>
       </Text>
-      <Text fx:id="phoneNumberValidation" layoutX="56.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+      <Text fx:id="phoneNumberValidation" layoutX="56.0" layoutY="287.0" onMouseClicked="#resetValidations" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
          <font>
             <Font name="System Bold Italic" size="10.0" />
          </font>

@@ -1,5 +1,7 @@
 package com.example.fleet_plan_project;
 
+import com.example.fleet_plan_project.model_Classes.Departure_Flight;
+import com.example.fleet_plan_project.model_Classes.Return_Flight;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -77,6 +79,10 @@ public class FlightInfo_Controller implements Initializable {
     public static LocalDate retDate;
     public static String noOfRetTickets;
 
+    public static Departure_Flight departureFlight;
+    public static Return_Flight returnFlight;
+
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -145,9 +151,11 @@ public class FlightInfo_Controller implements Initializable {
             new GeneralFunctions().switchScene(e,"ReturnReservationForm.fxml");
         }
         else if(returnNo.isSelected() && Integer.parseInt(MainScreen_Controller.getHours()) <= 2 && !returnReservation && originValidation.getText().equals("") && destinationValidation.getText().equals("") && departureDateValidation.getText().equals("")){
+            departureFlight = new Departure_Flight(depDate,depOriginAirport,depDestinationAirport);
             new GeneralFunctions().switchScene(e, "A318.fxml");
         }
         else if(returnNo.isSelected() && Integer.parseInt(MainScreen_Controller.getHours()) >2 && !returnReservation && originValidation.getText().equals("") && destinationValidation.getText().equals("") && departureDateValidation.getText().equals("")){
+            departureFlight = new Departure_Flight(depDate,depOriginAirport,depDestinationAirport);
             new GeneralFunctions().switchScene(e,"B737.fxml");
         }
     }
@@ -202,11 +210,11 @@ public class FlightInfo_Controller implements Initializable {
         }
 
         else if( retOriginValidation.getText().equals("") &&  retDestinationValidation.getText().equals("") && retDateValidation.getText().equals("") && returnTicketsValidation.getText().equals("") && Integer.parseInt(MainScreen_Controller.getHours()) <=2 ){
-            //TODO File Handling Here
+            returnFlight = new Return_Flight(retDate,retOriginAirport,retDestinationAirport,noOfRetTickets);
             new GeneralFunctions().switchScene(e,"A318.fxml");
         }
         else if( retOriginValidation.getText().equals("") &&  retDestinationValidation.getText().equals("") && retDateValidation.getText().equals("") && returnTicketsValidation.getText().equals("") && Integer.parseInt(MainScreen_Controller.getHours()) >2 ){
-            //TODO File Handling Here
+            returnFlight = new Return_Flight(retDate,retOriginAirport,retDestinationAirport,noOfRetTickets);
             new GeneralFunctions().switchScene(e,"B737.fxml");
         }
     }
