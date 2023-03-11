@@ -11,5 +11,6 @@ public class A318_Controller {
     @FXML
     public void exit() {
         new GeneralFunctions().close(exit);
+
     }
 }

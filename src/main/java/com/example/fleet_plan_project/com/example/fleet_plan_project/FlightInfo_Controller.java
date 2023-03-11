@@ -202,9 +202,11 @@ public class FlightInfo_Controller implements Initializable {
         }
 
         else if( retOriginValidation.getText().equals("") &&  retDestinationValidation.getText().equals("") && retDateValidation.getText().equals("") && returnTicketsValidation.getText().equals("") && Integer.parseInt(MainScreen_Controller.getHours()) <=2 ){
+            //TODO File Handling Here
             new GeneralFunctions().switchScene(e,"A318.fxml");
         }
         else if( retOriginValidation.getText().equals("") &&  retDestinationValidation.getText().equals("") && retDateValidation.getText().equals("") && returnTicketsValidation.getText().equals("") && Integer.parseInt(MainScreen_Controller.getHours()) >2 ){
+            //TODO File Handling Here
             new GeneralFunctions().switchScene(e,"B737.fxml");
         }
     }

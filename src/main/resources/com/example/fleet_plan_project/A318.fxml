@@ -7,21 +7,397 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1024.0" style="-fx-background-color: #0f4c81;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fleet_plan_project.A318_Controller">
+<AnchorPane prefHeight="768.0" prefWidth="1280.0" style="-fx-background-color: #0f4c81;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fleet_plan_project.A318_Controller">
    <children>
       <Text fill="WHITE" layoutX="20.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FLEET MANAGER">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Button fx:id="exit" layoutX="1141.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#exit" style="-fx-background-color: transparent;">
+      <Button fx:id="exit" layoutX="1215.0" layoutY="18.0" mnemonicParsing="false" onAction="#exit" onMouseClicked="#exit" style="-fx-background-color: transparent;">
          <graphic>
-            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="20.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Images/icons8-close-window-96.png" />
                </image>
             </ImageView>
-         </graphic>
-      </Button>
+         </graphic></Button>
+      <Text fill="WHITE" layoutX="58.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AIRBUS A318 SEATNG PLAN">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Button layoutX="1070.0" layoutY="437.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="1070.0" layoutY="487.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="1070.0" layoutY="537.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="1030.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="1030.0" layoutY="260.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="1030.0" layoutY="310.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="1030.0" layoutY="437.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="1030.0" layoutY="487.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="1030.0" layoutY="536.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="990.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="990.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="990.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="990.0" layoutY="436.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="990.0" layoutY="486.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="990.0" layoutY="536.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="910.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="910.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="910.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="910.0" layoutY="436.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="910.0" layoutY="486.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="910.0" layoutY="536.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="950.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="950.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="950.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="950.0" layoutY="436.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="950.0" layoutY="486.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="950.0" layoutY="536.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="830.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="830.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="830.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="830.0" layoutY="436.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="830.0" layoutY="486.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="830.0" layoutY="536.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="870.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="870.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="870.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="870.0" layoutY="436.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="870.0" layoutY="486.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="870.0" layoutY="536.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="750.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="750.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="750.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="750.0" layoutY="439.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="750.0" layoutY="489.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="750.0" layoutY="539.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="710.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="710.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="710.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="710.0" layoutY="439.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="710.0" layoutY="489.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="710.0" layoutY="539.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="630.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="630.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="630.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="630.0" layoutY="437.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="630.0" layoutY="487.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="630.0" layoutY="537.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="590.0" layoutY="208.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="590.0" layoutY="258.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="590.0" layoutY="308.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="590.0" layoutY="436.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="590.0" layoutY="486.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="590.0" layoutY="536.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="550.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="550.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="550.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="550.0" layoutY="437.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="550.0" layoutY="487.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="550.0" layoutY="537.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="510.0" layoutY="208.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="510.0" layoutY="258.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="510.0" layoutY="308.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="510.0" layoutY="436.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="510.0" layoutY="486.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="510.0" layoutY="536.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="470.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="470.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="470.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="470.0" layoutY="437.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="470.0" layoutY="487.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="470.0" layoutY="537.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="430.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="430.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="430.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="430.0" layoutY="437.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="430.0" layoutY="487.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="430.0" layoutY="537.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="390.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="390.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="390.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="390.0" layoutY="437.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="390.0" layoutY="487.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="390.0" layoutY="537.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="350.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="350.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="350.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="350.0" layoutY="437.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="350.0" layoutY="487.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="350.0" layoutY="537.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="310.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="310.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="310.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="310.0" layoutY="437.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="310.0" layoutY="487.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="310.0" layoutY="537.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="270.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="270.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="270.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="270.0" layoutY="437.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="270.0" layoutY="487.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="270.0" layoutY="537.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="230.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="230.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="230.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="230.0" layoutY="437.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="230.0" layoutY="487.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="230.0" layoutY="537.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="190.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="190.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="190.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="190.0" layoutY="437.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="190.0" layoutY="487.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="190.0" layoutY="537.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="150.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="150.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="150.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="150.0" layoutY="437.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="150.0" layoutY="487.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="150.0" layoutY="537.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Button layoutX="110.0" layoutY="209.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="A" />
+      <Button layoutX="110.0" layoutY="259.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="B" />
+      <Button layoutX="110.0" layoutY="309.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="C" />
+      <Button layoutX="110.0" layoutY="437.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="D" />
+      <Button layoutX="110.0" layoutY="487.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="E" />
+      <Button layoutX="110.0" layoutY="537.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="F" />
+      <Text fill="WHITE" layoutX="1081.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="01">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="1041.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="02">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="1001.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="03">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="960.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="04">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="920.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="05">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="881.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="06">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="840.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="07">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="761.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="08">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="720.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="09">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="642.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="601.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="560.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="522.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="13">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="480.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="14">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="441.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="400.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="360.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="17">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="322.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="18">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="281.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="19">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="242.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="200.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="21">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="161.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="22">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="120.0" layoutY="606.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="23">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="1120.0" layoutY="165.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: red;" text="EXIT" textFill="WHITE" />
+      <Button layoutX="1120.0" layoutY="580.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: red;" text="EXIT" textFill="WHITE" />
+      <Button layoutX="666.0" layoutY="157.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: red;" text="EXIT" textFill="WHITE" />
+      <Button layoutX="666.0" layoutY="580.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: red;" text="EXIT" textFill="WHITE" />
+      <Button layoutX="54.0" layoutY="157.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: red;" text="EXIT" textFill="WHITE" />
+      <Button layoutX="54.0" layoutY="580.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: red;" text="EXIT" textFill="WHITE" />
+      <Text fill="WHITE" layoutX="1077.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="01">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="1037.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="02">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="997.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="03">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="956.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="04">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="916.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="05">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="877.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="06">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="836.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="07">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="757.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="08">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="716.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="09">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="638.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="597.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="556.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="518.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="13">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="476.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="14">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="437.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="396.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="16">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="356.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="17">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="318.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="18">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="277.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="19">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="238.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="196.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="21">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="157.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="22">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="116.0" layoutY="187.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="23">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="1105.0" layoutY="689.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #1c2567;" text="Done" textFill="WHITE" />
    </children>
 </AnchorPane>
