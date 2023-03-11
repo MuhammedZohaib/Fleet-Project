@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1024.0" style="-fx-background-color: #0f4c81;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fleet_plan_project.FlightInfo_Controller">
+   <children>
+      <Text fill="WHITE" layoutX="20.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FLEET MANAGER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="welcomeText" fill="WHITE" layoutX="40.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="40.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Enter the Origin Airport">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="40.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the Date of Departure">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="425.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Enter the Destination Airport">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="originField" layoutX="40.0" layoutY="224.0" onMouseClicked="#resetValidations" prefWidth="230.0" />
+      <TextField fx:id="destinationField" layoutX="425.0" layoutY="224.0" onMouseClicked="#resetValidations" prefWidth="230.0" />
+      <DatePicker fx:id="dateField" layoutX="40.0" layoutY="334.0" onMouseClicked="#resetValidations" prefWidth="230.0" />
+      <RadioButton fx:id="returnYes" layoutX="360.0" layoutY="554.0" mnemonicParsing="false" text="Yes" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="g1" />
+         </toggleGroup>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="returnNo" layoutX="500.0" layoutY="554.0" mnemonicParsing="false" selected="true" text="No" textFill="WHITE" toggleGroup="$g1">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <Text fill="WHITE" layoutX="360.0" layoutY="529.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do You want to Reserve the Seats for Return?">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="disabledYes" layoutX="40.0" layoutY="554.0" mnemonicParsing="false" text="Yes" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="g2" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="disabledNo" layoutX="151.0" layoutY="554.0" mnemonicParsing="false" selected="true" text="No" textFill="WHITE" toggleGroup="$g2">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <Text fill="WHITE" layoutX="40.0" layoutY="529.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you a Disabled Person?">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="40.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do You want to Reserve Random Seats or Select Manually?">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="randomRButton" layoutX="40.0" layoutY="444.0" mnemonicParsing="false" selected="true" text="Random" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="g3" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="manualRButton" layoutX="240.0" layoutY="444.0" mnemonicParsing="false" text="Manually" textFill="WHITE" toggleGroup="$g3">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <ImageView fitHeight="700.0" fitWidth="480.0" layoutX="739.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@Images/rendy-novantino-LJEZHhiOtyo-unsplash.jpg" />
+         </image>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ImageView>
+      <Button fx:id="exit" layoutX="1141.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#exit" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="20.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/icons8-close-window-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fx:id="originValidation" layoutX="45.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="destinationValidation" layoutX="430.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="departureDateValidation" layoutX="45.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="40.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Fill The Below Form Carefully to Help Us Reserve You Tickets" underline="true" wrappingWidth="500.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="nextButton" layoutX="582.0" layoutY="633.0" mnemonicParsing="false" onAction="#next" prefWidth="100.0" style="-fx-background-color: #1c2567;" text="Next" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -19,22 +19,22 @@
             </ImageView>
          </graphic>
       </Button>
-      <Text fill="WHITE" layoutX="20.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter The Approximate Duration Of the Flight" wrappingWidth="200.0" />
-      <TextField fx:id="durationOfFlight" layoutX="20.0" layoutY="100.0" onMouseClicked="#resetValidation" prefWidth="200.0" />
+      <Text fill="WHITE" layoutX="18.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter The Approximate Duration Of the Flight" wrappingWidth="205.0" />
+      <TextField fx:id="durationOfFlight" layoutX="18.0" layoutY="110.0" onMouseClicked="#resetValidation" prefWidth="230.0" />
       <Text fill="WHITE" layoutX="20.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FLEET MANAGER">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Button fx:id="submitButton" layoutX="140.0" layoutY="270.0" mnemonicParsing="false" onAction="#next" prefWidth="80.0" style="-fx-background-color: #1c2567; -fx-border-radius: 5px;" text="Next" textFill="WHITE" />
-      <Text fill="WHITE" layoutX="20.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter The Number of Ticket You Want to Purchase" wrappingWidth="200.0" />
-      <TextField fx:id="noOfTickets" layoutX="20.0" layoutY="180.0" onMouseClicked="#resetValidation" prefWidth="200.0" />
-      <Text fx:id="durationOfFlight_Validation" layoutX="20.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true" wrappingWidth="200.0">
+      <Button fx:id="submitButton" layoutX="180.0" layoutY="289.0" mnemonicParsing="false" onAction="#next" prefWidth="80.0" style="-fx-background-color: #1c2567; -fx-border-radius: 5px;" text="Next" textFill="WHITE" />
+      <Text fill="WHITE" layoutX="16.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter The Number of Ticket You Want to Purchase" wrappingWidth="210.0" />
+      <TextField fx:id="noOfTickets" layoutX="16.0" layoutY="221.0" onMouseClicked="#resetValidation" prefWidth="230.0" />
+      <Text fx:id="durationOfFlight_Validation" layoutX="26.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true" wrappingWidth="200.0">
          <font>
             <Font name="System Italic" size="12.0" />
          </font>
       </Text>
-      <Text fx:id="noOfTickets_Validation" layoutX="20.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true" wrappingWidth="200.0">
+      <Text fx:id="noOfTickets_Validation" layoutX="28.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true" wrappingWidth="200.0">
          <font>
             <Font name="System Italic" size="12.0" />
          </font>

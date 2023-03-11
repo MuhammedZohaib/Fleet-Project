@@ -9,11 +9,12 @@ import javafx.scene.text.Text;
 
 import java.io.IOException;
 
-public class MainScreen_Controller {
+public class MainScreen_Controller  {
     @FXML
     private TextField durationOfFlight; //JavaFx Component from Fxml file
     @FXML
     private Text durationOfFlight_Validation; //JavaFx Component from Fxml file
+
     @FXML
     private TextField noOfTickets; //JavaFx Component from Fxml file
     @FXML
@@ -22,27 +23,19 @@ public class MainScreen_Controller {
     private Button exit; //JavaFx Component from Fxml file
     String numericRegex = "^[0-9]*$"; //Regular Expression to ensure input is only Numeric
 
-    private String hours; //Access Modifier to Private -> Encapsulation
-    private String noOf_Tickets; //Access Modifier to Private -> Encapsulation
+    private static String hours; //Access Modifier to Private -> Encapsulation
+    private static String noOf_Tickets; //Access Modifier to Private -> Encapsulation
     public void exit(){ // A function to exit
         new GeneralFunctions().close(exit); //Anonymous object of General Function class
     }
 
-    public String getHours() { //Getter Method
+    static String getHours() { //Getter Method
         return hours;
     }
-
-    public void setHours(String hours) { //Setter Method
-        this.hours = hours;
-    }
-
-    public String getNoOf_Tickets() { //Getter Method
+    static String getNoOf_Tickets() { //Getter Method
         return noOf_Tickets;
     }
 
-    public void setNoOf_Tickets(String noOf_Tickets) { //Setter Method
-        this.noOf_Tickets = noOf_Tickets;
-    }
 
     @FXML
     public void next(ActionEvent e) throws IOException { //A validator and Scene Switch Method
@@ -69,11 +62,11 @@ public class MainScreen_Controller {
         }
         //Validation and Scene Switch to Flight A318
         else if(Integer.parseInt(hours) <= 2 && noOfTickets_Validation.getText().equals("") && durationOfFlight_Validation.getText().equals("")){
-            new GeneralFunctions().switchScene(e,"A318.fxml"); //Anonymous Object
+            new GeneralFunctions().switchScene(e,"Flight_Info.fxml"); //Anonymous Object
         }
         //Validation and Scene Switch to Flight Boeing 737
         else if(Integer.parseInt(hours) > 2 && noOfTickets_Validation.getText().equals("") && durationOfFlight_Validation.getText().equals("")){
-            new GeneralFunctions().switchScene(e,"B737.fxml"); //Anonymous Object
+            new GeneralFunctions().switchScene(e,"Flight_Info.fxml"); //Anonymous Object
         }
     }
     public void resetValidation(){ //A method to reset the text in Validation Upon mouse click

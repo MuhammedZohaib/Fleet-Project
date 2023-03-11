@@ -23,10 +23,5 @@
             </ImageView>
          </graphic>
       </Button>
-      <Text fill="WHITE" layoutX="20.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME TO AIRBUS A318">
-         <font>
-            <Font name="System Bold" size="36.0" />
-         </font>
-      </Text>
    </children>
 </AnchorPane>
