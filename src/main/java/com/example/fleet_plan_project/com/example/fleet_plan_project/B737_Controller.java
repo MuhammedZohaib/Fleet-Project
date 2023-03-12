@@ -7,6 +7,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class B737_Controller {
 
@@ -14,6 +17,8 @@ public class B737_Controller {
 
     @FXML
     private Button exit;
+
+    public static ArrayList<Button> reservedSeats = new ArrayList<>();
 
     @FXML
     void exit() {
@@ -33,9 +38,10 @@ public class B737_Controller {
     }
     public void done(ActionEvent e) throws IOException {
         if(UserInfo_Controller.seatCount == Integer.parseInt(MainScreen_Controller.getNoOf_Tickets())){
-            flight = new Flight(FlightInfo_Controller.departureFlight,UserInfo_Controller.person,FlightInfo_Controller.returnFlight);
-            System.out.print(flight);
+            flight = new Flight(FlightInfo_Controller.departureFlight,UserInfo_Controller.person,FlightInfo_Controller.returnFlight,reservedSeats);
+            new GeneralFunctions().reserveData(flight);
             new GeneralFunctions().switchScene(e,"Farewell.fxml");
+            System.out.println(reservedSeats);
         }
         else if (UserInfo_Controller.seatCount != Integer.parseInt(MainScreen_Controller.getNoOf_Tickets())){
             new GeneralFunctions().switchSceneModality("Warning2.fxml");

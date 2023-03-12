@@ -1,6 +1,8 @@
 package com.example.fleet_plan_project;
 
 //Import Statements
+import com.example.fleet_plan_project.model_Classes.Departure_Flight;
+import com.example.fleet_plan_project.model_Classes.Flight;
 import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -10,7 +12,8 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
 
 public class GeneralFunctions {
     LoadingScreen_Controller obj = new LoadingScreen_Controller(); //Initialized an Object to reuse previously declared Stages and Scenes
@@ -41,4 +44,64 @@ public class GeneralFunctions {
         obj.stage.close();
     }
 
-}
+    public void reserveData(Flight clientInfo) throws IOException {
+        String reservationDate;
+        if(Integer.parseInt(MainScreen_Controller.getHours()) <= 2){
+            reservationDate = "A318_"+clientInfo.getDepartureFlights().getDateOfDeparture().toString() + ".txt";
+        }
+        else {
+            reservationDate = "B737_"+clientInfo.getDepartureFlights().getDateOfDeparture().toString() + ".txt";
+        }
+        ObjectOutputStream oos = null;
+        FileOutputStream fos = null;
+
+        try {
+            fos = new FileOutputStream(reservationDate, true); // true to append, false to overwrite
+            oos = new ObjectOutputStream(fos);
+            oos.writeObject(clientInfo);
+        } finally {
+            if (oos != null) {
+                oos.close();
+            }
+            if (fos != null) {
+                fos.close();
+            }
+        }
+    }
+    public static ArrayList<Flight> showReservedSeats(){
+        String fileName;
+        ArrayList <Flight> tmp = new ArrayList<>();
+        if(Integer.parseInt(MainScreen_Controller.getHours()) <= 2){
+            fileName = "A318_"+Departure_Flight.getDateOfDeparture()+".txt";
+        }
+        else {
+            fileName = "B737_"+Departure_Flight.getDateOfDeparture()+".txt";
+        }
+        File file = new File(fileName);
+        if (file.exists()) {
+            try {
+                FileInputStream fileIn = new FileInputStream(file);
+                ObjectInputStream objIn = new ObjectInputStream(fileIn);
+                while (true){
+                    Flight flight = (Flight) objIn.readObject();
+                    tmp.add(flight);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null;
+            }
+            finally {
+                return tmp;
+            }
+
+        } else {
+            System.out.println("File does not exist.");
+            return null;
+        }
+
+    }
+    }
+
+
+
+

@@ -1,8 +1,9 @@
 package com.example.fleet_plan_project.model_Classes;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Return_Flight {
+public class Return_Flight implements Serializable {
     private LocalDate returnDate;
     private String retOrigin;
     private String retDestination;
@@ -34,6 +35,16 @@ public class Return_Flight {
 
     public String getNoOfTickets() {
         return noOfTickets;
+    }
+
+    @Override
+    public String toString() {
+        return "Return_Flight{" +
+                "returnDate=" + returnDate +
+                ", retOrigin='" + retOrigin + '\'' +
+                ", retDestination='" + retDestination + '\'' +
+                ", noOfTickets='" + noOfTickets + '\'' +
+                '}';
     }
 
     public void setNoOfTickets(String noOfTickets) {
