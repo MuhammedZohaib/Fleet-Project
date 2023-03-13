@@ -13,7 +13,6 @@ public class Departure_Flight implements Serializable {
     public static void setDateOfDeparture(LocalDate dateOfDeparture) {
         Departure_Flight.dateOfDeparture = dateOfDeparture;
     }
-
     public String getDepartureOrigin() {
         return departureOrigin;
     }

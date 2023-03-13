@@ -57,7 +57,7 @@ public class GeneralFunctions {
 
         try {
             fos = new FileOutputStream(reservationDate, true); // true to append, false to overwrite
-            oos = new ObjectOutputStream(fos);
+            oos = new MyObjectOutputStream(fos);
             oos.writeObject(clientInfo);
         } finally {
             if (oos != null) {
@@ -81,17 +81,18 @@ public class GeneralFunctions {
         if (file.exists()) {
             try {
                 FileInputStream fileIn = new FileInputStream(file);
-                ObjectInputStream objIn = new ObjectInputStream(fileIn);
+                MyObjectInputStream objIn = new MyObjectInputStream(fileIn);
                 while (true){
                     Flight flight = (Flight) objIn.readObject();
                     tmp.add(flight);
                 }
             } catch (Exception e) {
-                e.printStackTrace();
+                System.out.println(e);
                 return null;
             }
             finally {
                 return tmp;
+
             }
 
         } else {
