@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.fleet_plan_project.Farewell_Controller"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="291.0" prefWidth="600.0" style="-fx-background-color: #1c2567;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fleet_plan_project.Farewell_Controller">
+   <children>
+      <Button fx:id="userInfoClose" layoutX="551.0" layoutY="2.0" mnemonicParsing="false" onAction="#close" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/icons8-close-window-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fill="WHITE" layoutX="20.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FLEET MANAGER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="231.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dear valued customer,">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="40.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dear valued customer,Thank you for reserving your airplane seats with us. We are pleased to inform you that your seats have been successfully reserved for your upcoming trip. Your tickets will be delivered to your mailbox shortly.Additionally, we would like to assure you that your return tickets will be sent to you prior to the date of your return. We hope that you have a pleasant travel experience with us.Thank you for choosing our services." textAlignment="CENTER" wrappingWidth="500.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+   </children>
 </AnchorPane>
