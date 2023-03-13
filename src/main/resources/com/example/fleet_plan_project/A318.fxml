@@ -27,12 +27,12 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <Button fx:id="E1" layoutX="1070.0" layoutY="487.0" mnemonicParsing="false" onAction="#userInfoForm" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #e3efee;" text="E" />
-      <Button fx:id="F1" layoutX="1070.0" layoutY="537.0" mnemonicParsing="false" onAction="#userInfoForm" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #e3efee;" text="F" />
-      <Button fx:id="D1" layoutX="1070.0" layoutY="437.0" mnemonicParsing="false" onAction="#userInfoForm" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #e3efee;" text="D" />
-      <Button fx:id="A2" layoutX="1030.0" layoutY="209.0" mnemonicParsing="false" onAction="#userInfoForm" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #e3efee;" text="A" />
-      <Button fx:id="B2" layoutX="1030.0" layoutY="260.0" mnemonicParsing="false" onAction="#userInfoForm" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #e3efee;" text="B" />
-      <Button fx:id="C2" layoutX="1030.0" layoutY="310.0" mnemonicParsing="false" onAction="#userInfoForm" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #e3efee;" text="C" />
+      <Button fx:id="E01" layoutX="1070.0" layoutY="487.0" mnemonicParsing="false" onAction="#userInfoForm" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #e3efee;" text="E" />
+      <Button fx:id="F01" layoutX="1070.0" layoutY="537.0" mnemonicParsing="false" onAction="#userInfoForm" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #e3efee;" text="F" />
+      <Button fx:id="D01" layoutX="1070.0" layoutY="437.0" mnemonicParsing="false" onAction="#userInfoForm" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #e3efee;" text="D" />
+      <Button fx:id="A02" layoutX="1030.0" layoutY="209.0" mnemonicParsing="false" onAction="#userInfoForm" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #e3efee;" text="A" />
+      <Button fx:id="B02" layoutX="1030.0" layoutY="260.0" mnemonicParsing="false" onAction="#userInfoForm" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #e3efee;" text="B" />
+      <Button fx:id="C02" layoutX="1030.0" layoutY="310.0" mnemonicParsing="false" onAction="#userInfoForm" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #e3efee;" text="C" />
       <Button fx:id="D2" layoutX="1030.0" layoutY="437.0" mnemonicParsing="false" onAction="#userInfoForm" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #e3efee;" text="D" />
       <Button fx:id="E2" layoutX="1030.0" layoutY="487.0" mnemonicParsing="false" onAction="#userInfoForm" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #e3efee;" text="E" />
       <Button fx:id="F2" layoutX="1030.0" layoutY="536.0" mnemonicParsing="false" onAction="#userInfoForm" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #e3efee;" text="F" />

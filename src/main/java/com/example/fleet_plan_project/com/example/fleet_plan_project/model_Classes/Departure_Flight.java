@@ -13,23 +13,24 @@ public class Departure_Flight implements Serializable {
     public static void setDateOfDeparture(LocalDate dateOfDeparture) {
         Departure_Flight.dateOfDeparture = dateOfDeparture;
     }
-    public String getDepartureOrigin() {
+
+    public static String getDepartureOrigin() {
         return departureOrigin;
     }
 
-    public void setDepartureOrigin(String departureOrigin) {
-        this.departureOrigin = departureOrigin;
+    public static void setDepartureOrigin(String departureOrigin) {
+        Departure_Flight.departureOrigin = departureOrigin;
     }
 
-    public String getDepartureDestination() {
+    public static String getDepartureDestination() {
         return departureDestination;
     }
 
-    public void setDepartureDestination(String departureDestination) {
-        this.departureDestination = departureDestination;
+    public static void setDepartureDestination(String departureDestination) {
+        Departure_Flight.departureDestination = departureDestination;
     }
 
-    private String departureOrigin;
+    private static String departureOrigin;
 
     public Departure_Flight(LocalDate dateOfDeparture, String departureOrigin, String departureDestination) {
         this.dateOfDeparture = dateOfDeparture;
@@ -46,7 +47,7 @@ public class Departure_Flight implements Serializable {
                 '}';
     }
 
-    private String departureDestination;
+    private static String departureDestination;
 
 
 }

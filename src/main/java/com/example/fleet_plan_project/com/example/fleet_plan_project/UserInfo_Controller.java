@@ -28,7 +28,6 @@ public class UserInfo_Controller {
     private TextField phoneNumber;
     @FXML
     private Button reserveSeat;
-
     @FXML
     private Button userInfoClose;
     String alphabetRegex = "^[a-zA-Z ]*$";
@@ -43,6 +42,9 @@ public class UserInfo_Controller {
 
     public void close(){
         new GeneralFunctions().close(userInfoClose);
+    }
+    public void exit(){
+        new GeneralFunctions().close(reserveSeat);
     }
     public void reserve(ActionEvent e){
         clientName = name.getText();
@@ -72,7 +74,7 @@ public class UserInfo_Controller {
         else if(nameValidation.getText().equals("") && phoneNumberValidation.getText().equals("") && ageValidation.getText().equals("")){
             Person client = new Person(clientName,clientAge,clientPhoneNumber);
             person.add(client);
-            close();
+            exit();
             seatCount++;
         }
 

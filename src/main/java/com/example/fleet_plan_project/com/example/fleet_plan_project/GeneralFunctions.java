@@ -47,35 +47,25 @@ public class GeneralFunctions {
     public void reserveData(Flight clientInfo) throws IOException {
         String reservationDate;
         if(Integer.parseInt(MainScreen_Controller.getHours()) <= 2){
-            reservationDate = "A318_"+clientInfo.getDepartureFlights().getDateOfDeparture().toString() + ".txt";
+            reservationDate = "A318_"+ Departure_Flight.getDateOfDeparture().toString() + Departure_Flight.getDepartureOrigin().toLowerCase() +"to"+ Departure_Flight.getDepartureDestination().toLowerCase() +".txt";
         }
         else {
-            reservationDate = "B737_"+clientInfo.getDepartureFlights().getDateOfDeparture().toString() + ".txt";
+            reservationDate = "B737_"+ Departure_Flight.getDateOfDeparture().toString() + Departure_Flight.getDepartureOrigin().toLowerCase() +"to"+ Departure_Flight.getDepartureDestination().toLowerCase() +".txt";
         }
-        ObjectOutputStream oos = null;
-        FileOutputStream fos = null;
 
-        try {
-            fos = new FileOutputStream(reservationDate, true); // true to append, false to overwrite
-            oos = new MyObjectOutputStream(fos);
+        try (FileOutputStream fos = new FileOutputStream(reservationDate, true); ObjectOutputStream oos = new MyObjectOutputStream(fos)) {
+            // true to append, false to overwrite
             oos.writeObject(clientInfo);
-        } finally {
-            if (oos != null) {
-                oos.close();
-            }
-            if (fos != null) {
-                fos.close();
-            }
         }
     }
     public static ArrayList<Flight> showReservedSeats(){
         String fileName;
         ArrayList <Flight> tmp = new ArrayList<>();
         if(Integer.parseInt(MainScreen_Controller.getHours()) <= 2){
-            fileName = "A318_"+Departure_Flight.getDateOfDeparture()+".txt";
+            fileName = "A318_"+Departure_Flight.getDateOfDeparture()+ Departure_Flight.getDepartureOrigin().toLowerCase() +"to"+Departure_Flight.getDepartureDestination().toLowerCase()+".txt";
         }
         else {
-            fileName = "B737_"+Departure_Flight.getDateOfDeparture()+".txt";
+            fileName = "B737_"+Departure_Flight.getDateOfDeparture()+  Departure_Flight.getDepartureOrigin().toLowerCase() +"to"+Departure_Flight.getDepartureDestination().toLowerCase()+".txt";
         }
         File file = new File(fileName);
         if (file.exists()) {
@@ -87,7 +77,7 @@ public class GeneralFunctions {
                     tmp.add(flight);
                 }
             } catch (Exception e) {
-                System.out.println(e);
+                System.out.println("All Objects Read"+e);
                 return null;
             }
             finally {

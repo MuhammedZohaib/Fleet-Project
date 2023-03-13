@@ -10,7 +10,6 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
@@ -232,6 +231,7 @@ public class FlightInfo_Controller implements Initializable {
     public void exit(){
         new GeneralFunctions().close(exit);
     }
+
     public void reservationExit(){
         new GeneralFunctions().close(reservationCloseButton);
     }

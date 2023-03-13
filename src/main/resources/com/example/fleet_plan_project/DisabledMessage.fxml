@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="200.0" prefWidth="344.0" style="-fx-background-color: #1c2567;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fleet_plan_project.UserInfo_Controller">
+   <children>
+      <Button fx:id="userInfoClose" layoutX="295.0" layoutY="3.0" mnemonicParsing="false" onAction="#close" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/icons8-close-window-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fill="WHITE" layoutX="14.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FLEET MANAGER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="ageValidation" layoutX="56.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+      </Text>
+      <Text fx:id="phoneNumberValidation" layoutX="56.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="88.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="! IMPORTANT" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#eeefee" layoutX="25.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We Are Pleased To Inform you that for a safe and comfortable journey we have selected some of our most comfortable seats for our special clients. Make sure to reserve the Seats coloured in Green" textAlignment="CENTER" wrappingWidth="300.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
